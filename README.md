@@ -29,15 +29,15 @@ print("Cancel Pressed")
 
 ##### 4) animationTypes:<br/> 
 
-``public enum animationType {<br/> 
-case Default<br/> 
-case Shake<br/> 
-case SlideDown<br/> 
-case SlideUp<br/> 
-case SlideRight<br/> 
-case SlideLeft<br/> 
-case Fade<br/> 
-}``<br/> 
+``public enum animationType {``<br/> 
+``case Default``<br/> 
+``case Shake``<br/> 
+``case SlideDown``<br/> 
+``case SlideUp``<br/> 
+``case SlideRight``<br/> 
+``case SlideLeft``<br/> 
+``case Fade``<br/> 
+``}``<br/> 
 
 
 ## Requierments ##
