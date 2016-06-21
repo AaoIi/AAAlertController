@@ -44,6 +44,25 @@ class ViewController: UIViewController {
         
     }
     
+    
+    @IBAction func AlertWithThreeButtons(sender: AnyObject) {
+        
+        alertViews.AAAlert("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
+            
+                print("Share Pressed")
+            
+            }, secondButtonTitle: "Rate", secondButtonCompletionBlock: { () -> (Void) in
+                
+                print("Rate Pressed")
+                
+            }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
+                
+                print("Cancel Pressed")
+                
+            }, animationStyle: animationType.Default)
+        
+    }
+    
     @IBAction func AlertWithFadeAnimation(sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithFadeAnimation", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in

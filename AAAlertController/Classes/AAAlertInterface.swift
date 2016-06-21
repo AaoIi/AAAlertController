@@ -34,6 +34,19 @@ class AAAlertInterface {
         findAndReturnTopViewController().presentViewController(alertView, animated: true, completion: nil)
         
     }
+    
+    
+    func AAAlert(title:String?,message:String?,firstButtonTitle:String,firstButtonCompletionBlock: ()->(Void),secondButtonTitle:String,secondButtonCompletionBlock: ()->(Void),cancelButtonTitle:String,cancelCompletionBlock: ()->(Void),animationStyle:animationType){
+        
+        let alertView = AAAlertController(nibName: "AAAlertController", bundle: NSBundle.mainBundle())
+        alertView.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+        alertView.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        alertView.AAAlertController(self.checkAndCleanNilValues(title), message: self.checkAndCleanNilValues(message), firstButtonTitle: firstButtonTitle, secondButtonTitle: secondButtonTitle, cancelButtonTitle: cancelButtonTitle, animationStyle: animationStyle, okCompletionBlock: firstButtonCompletionBlock, okCompletionBlock1: secondButtonCompletionBlock, cancelCompletionBlock: cancelCompletionBlock)
+        
+        
+        findAndReturnTopViewController().presentViewController(alertView, animated: true, completion: nil)
+        
+    }
 
 
     private func checkAndCleanNilValues(string:String?) -> String{

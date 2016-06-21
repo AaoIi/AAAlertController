@@ -38,13 +38,29 @@ class AAAlertController: UIViewController {
     @IBOutlet var cancelButton2: UIButton!
     @IBOutlet var okButton: UIButton!
     
+    @IBOutlet var viewWithThreeButtons: UIView!
+    @IBOutlet var viewThreeHeight: NSLayoutConstraint!
+    @IBOutlet var titleLabel3: UILabel!
+    @IBOutlet var titleLabel3Height: NSLayoutConstraint!
+    @IBOutlet var messageLabel3: UILabel!
+    @IBOutlet var firstButton: UIButton!
+    @IBOutlet var secondButton: UIButton!
+    @IBOutlet var cancelButton3: UIButton!
+    
+    
     //* local variables
     private var titleText : String?
     private var messageText : String?
     private var cancelButtonTitle : String?
     private var okButtonTitle : String?
+    // ok button title 1 is used for three button view (second button)
+    private var okButtonTitle1 : String?
     private var oneViewFlag = false
+    private var twoViewFlag = false
+    private var threeViewFlag = false
     private var okCompletionBlock : () -> (Void) = {}
+    // ok completion block 1 is used for three button view (second button)
+    private var okCompletionBlock1 : () -> (Void) = {}
     private var cancelCompletionBlock : () -> (Void) = {}
     private var animationStyle : animationType!
     
@@ -57,6 +73,7 @@ class AAAlertController: UIViewController {
             //* setup for alert with cancel button
             self.viewWithTwoButtons.hidden = true
             self.viewOneButton.hidden = false
+            self.viewWithThreeButtons.hidden = true
             
             self.titleLabel.text = titleText
             self.messageLabel.text = messageText
@@ -65,11 +82,12 @@ class AAAlertController: UIViewController {
             
             caclulateAlertHeight(viewOneHeight, view: viewOneButton, messageLabel: messageLabel, titleHeightConstraint: titleLabelHeight, titleLabel: titleLabel)
             
-        }else {
+        }else if twoViewFlag == true{
             
             //* setup for alert with action and cancel button
             self.viewWithTwoButtons.hidden = false
             self.viewOneButton.hidden = true
+            self.viewWithThreeButtons.hidden = true
             
             self.titleLabel2.text = titleText
             self.messageLabel2.text = messageText
@@ -82,6 +100,27 @@ class AAAlertController: UIViewController {
             
             caclulateAlertHeight(viewTwoHeight, view: viewWithTwoButtons, messageLabel: messageLabel2, titleHeightConstraint: titleLabel2Height, titleLabel: titleLabel2)
 
+        }else {
+        
+            //* Setup for alert with two buttons and cancel button
+            self.viewWithTwoButtons.hidden = true
+            self.viewOneButton.hidden = true
+            self.viewWithThreeButtons.hidden = false
+        
+            self.titleLabel3.text = titleText
+            self.messageLabel3.text = messageText
+            
+            self.cancelButton3.setTitle(cancelButtonTitle, forState: UIControlState.Normal)
+            self.cancelButton3.addTarget(self, action: #selector(self.cancelAAAlertController(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            
+            self.firstButton.setTitle(okButtonTitle, forState: UIControlState.Normal)
+            self.firstButton.addTarget(self, action: #selector(self.okAAAlertController(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            
+            self.secondButton.setTitle(okButtonTitle1, forState: UIControlState.Normal)
+            self.secondButton.addTarget(self, action: #selector(self.okAAAlertController1(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            
+            caclulateAlertHeight(viewThreeHeight, view: viewWithThreeButtons, messageLabel: messageLabel, titleHeightConstraint: titleLabel3Height, titleLabel: titleLabel3)
+        
         }
         
 
@@ -93,9 +132,12 @@ class AAAlertController: UIViewController {
             
             self.makeAnimationForView(viewOneButton)
             
-        }else {
+        }else if twoViewFlag == true{
             
             self.makeAnimationForView(viewWithTwoButtons)
+        }else {
+        
+            self.makeAnimationForView(viewWithThreeButtons)
         }
         
     }
@@ -111,6 +153,8 @@ class AAAlertController: UIViewController {
         self.messageText = message
         self.cancelButtonTitle = cancelButtonTitle
         self.oneViewFlag = true
+        self.twoViewFlag = false
+        self.threeViewFlag = false
         self.cancelCompletionBlock = completionBlock
         self.animationStyle = animationStyle
         
@@ -118,17 +162,36 @@ class AAAlertController: UIViewController {
     
     func AAAlertController(title:String,message:String,cancelButtonTitle:String,okButtonTitle:String,animationStyle:animationType,okCompletionBlock: () -> (Void),cancelCompletionBlock: () -> (Void)){
         
-        
         self.titleText = title
         self.messageText = message
         self.cancelButtonTitle = cancelButtonTitle
         self.okButtonTitle = okButtonTitle
         self.oneViewFlag = false
+        self.twoViewFlag = true
+        self.threeViewFlag = false
         self.okCompletionBlock = okCompletionBlock
         self.cancelCompletionBlock = cancelCompletionBlock
         self.animationStyle = animationStyle
         
     }
+    
+    func AAAlertController(title:String,message:String,firstButtonTitle:String,secondButtonTitle:String,cancelButtonTitle:String,animationStyle:animationType,okCompletionBlock: () -> (Void),okCompletionBlock1: () -> (Void),cancelCompletionBlock: () -> (Void)){
+        
+        self.titleText = title
+        self.messageText = message
+        self.cancelButtonTitle = cancelButtonTitle
+        self.okButtonTitle = firstButtonTitle
+        self.okButtonTitle1 = secondButtonTitle
+        self.oneViewFlag = false
+        self.twoViewFlag = false
+        self.threeViewFlag = true
+        self.okCompletionBlock = okCompletionBlock
+        self.okCompletionBlock1 = okCompletionBlock1
+        self.cancelCompletionBlock = cancelCompletionBlock
+        self.animationStyle = animationStyle
+        
+    }
+    
     
     @objc
     private func cancelAAAlertController(cancelButtonSender :UIButton) {
@@ -144,6 +207,15 @@ class AAAlertController: UIViewController {
         
         //* executue completion block and cancel alert controller
         self.okCompletionBlock()
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    @objc
+    private func okAAAlertController1(okButtonSender :UIButton){
+        
+        //* executue completion block and cancel alert controller
+        self.okCompletionBlock1()
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
