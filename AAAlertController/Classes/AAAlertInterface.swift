@@ -11,45 +11,45 @@ import UIKit
 
 class AAAlertInterface {
 
-    func AAAlert(title:String?,message:String?,cancelButtonTitle:String,completionBlock: ()->(Void),animationStyle:animationType){
+    func AAAlert(_ title:String?,message:String?,cancelButtonTitle:String,completionBlock: @escaping ()->(Void),animationStyle:animationType){
 
-        let alertView = AAAlertController(nibName: "AAAlertController", bundle: NSBundle.mainBundle())
-        alertView.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-        alertView.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        let alertView = AAAlertController(nibName: "AAAlertController", bundle: Bundle.main)
+        alertView.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        alertView.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         alertView.AAAlertController(self.checkAndCleanNilValues(title), message: self.checkAndCleanNilValues(message), cancelButtonTitle: cancelButtonTitle,animationStyle:animationStyle, completionBlock:completionBlock)
 
-        findAndReturnTopViewController().presentViewController(alertView, animated: true, completion: nil)
+        findAndReturnTopViewController().present(alertView, animated: true, completion: nil)
     
     }
     
-    func AAAlert(title:String?,message:String?,okButtonTitle:String,okCompletionBlock: ()->(Void),cancelButtonTitle:String,cancelCompletionBlock: ()->(Void),animationStyle:animationType){
+    func AAAlert(_ title:String?,message:String?,okButtonTitle:String,okCompletionBlock: @escaping ()->(Void),cancelButtonTitle:String,cancelCompletionBlock: @escaping ()->(Void),animationStyle:animationType){
         
-        let alertView = AAAlertController(nibName: "AAAlertController", bundle: NSBundle.mainBundle())
-        alertView.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-        alertView.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        let alertView = AAAlertController(nibName: "AAAlertController", bundle: Bundle.main)
+        alertView.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        alertView.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         alertView.AAAlertController(self.checkAndCleanNilValues(title), message: self.checkAndCleanNilValues(message), cancelButtonTitle: cancelButtonTitle, okButtonTitle: okButtonTitle,animationStyle:animationStyle, okCompletionBlock: okCompletionBlock, cancelCompletionBlock: cancelCompletionBlock)
         
 
-        findAndReturnTopViewController().presentViewController(alertView, animated: true, completion: nil)
+        findAndReturnTopViewController().present(alertView, animated: true, completion: nil)
         
     }
     
     
-    func AAAlert(title:String?,message:String?,firstButtonTitle:String,firstButtonCompletionBlock: ()->(Void),secondButtonTitle:String,secondButtonCompletionBlock: ()->(Void),cancelButtonTitle:String,cancelCompletionBlock: ()->(Void),animationStyle:animationType){
+    func AAAlert(_ title:String?,message:String?,firstButtonTitle:String,firstButtonCompletionBlock: @escaping ()->(Void),secondButtonTitle:String,secondButtonCompletionBlock: @escaping ()->(Void),cancelButtonTitle:String,cancelCompletionBlock: @escaping ()->(Void),animationStyle:animationType){
         
-        let alertView = AAAlertController(nibName: "AAAlertController", bundle: NSBundle.mainBundle())
-        alertView.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-        alertView.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        let alertView = AAAlertController(nibName: "AAAlertController", bundle: Bundle.main)
+        alertView.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        alertView.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         alertView.AAAlertController(self.checkAndCleanNilValues(title), message: self.checkAndCleanNilValues(message), firstButtonTitle: firstButtonTitle, secondButtonTitle: secondButtonTitle, cancelButtonTitle: cancelButtonTitle, animationStyle: animationStyle, okCompletionBlock: firstButtonCompletionBlock, okCompletionBlock1: secondButtonCompletionBlock, cancelCompletionBlock: cancelCompletionBlock)
         
         
-        findAndReturnTopViewController().presentViewController(alertView, animated: true, completion: nil)
+        findAndReturnTopViewController().present(alertView, animated: true, completion: nil)
         
     }
 
 
-    private func checkAndCleanNilValues(string:String?) -> String{
+    fileprivate func checkAndCleanNilValues(_ string:String?) -> String{
         
         if string == nil {
             return ""
@@ -59,9 +59,9 @@ class AAAlertInterface {
         
     }
     
-    private func findAndReturnTopViewController() -> UIViewController {
+    fileprivate func findAndReturnTopViewController() -> UIViewController {
         
-        if var topController = UIApplication.sharedApplication().keyWindow?.rootViewController {
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
             while let presentedViewController = topController.presentedViewController {
                 topController = presentedViewController
             }

@@ -26,26 +26,26 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func AlertWithCancel(sender: AnyObject) {
+    @IBAction func AlertWithCancel(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
             print("Cancel Pressed")
-            }, animationStyle: animationType.Default)
+            }, animationStyle: animationType.default)
         
     }
     
-    @IBAction func AlertWithCancelAndOK(sender: AnyObject) {
+    @IBAction func AlertWithCancelAndOK(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithCancelAndOK", okButtonTitle: "OK", okCompletionBlock: { () -> (Void) in
             print("OK Pressed")
             }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
                 print("Cancel Pressed")
-            }, animationStyle: animationType.Default)
+            }, animationStyle: animationType.default)
         
     }
     
     
-    @IBAction func AlertWithThreeButtons(sender: AnyObject) {
+    @IBAction func AlertWithThreeButtons(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
             
@@ -59,55 +59,55 @@ class ViewController: UIViewController {
                 
                 print("Cancel Pressed")
                 
-            }, animationStyle: animationType.Default)
+            }, animationStyle: animationType.default)
         
     }
     
-    @IBAction func AlertWithFadeAnimation(sender: AnyObject) {
+    @IBAction func AlertWithFadeAnimation(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithFadeAnimation", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
             print("Cancel Pressed")
-            }, animationStyle: animationType.Fade)
+            }, animationStyle: animationType.fade)
         
     }
     
-    @IBAction func AlertWithShakeAnimation(sender: AnyObject) {
+    @IBAction func AlertWithShakeAnimation(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithShakeAnimation", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
             print("Cancel Pressed")
-            }, animationStyle: animationType.Shake)
+            }, animationStyle: animationType.shake)
         
     }
-    @IBAction func AlertWithSlideDownAimation(sender: AnyObject) {
+    @IBAction func AlertWithSlideDownAimation(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithSlideDownAimation", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
             print("Cancel Pressed")
-            }, animationStyle: animationType.SlideDown)
+            }, animationStyle: animationType.slideDown)
         
     }
     
     
-    @IBAction func AlertWithSlideUpAimation(sender: AnyObject) {
+    @IBAction func AlertWithSlideUpAimation(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithSlideUpAimation", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
             print("Cancel Pressed")
-            }, animationStyle: animationType.SlideUp)
+            }, animationStyle: animationType.slideUp)
         
     }
 
-    @IBAction func AlertWithSlideRightAimation(sender: AnyObject) {
+    @IBAction func AlertWithSlideRightAimation(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithSlideRightAimation", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
             print("Cancel Pressed")
-            }, animationStyle: animationType.SlideRight)
+            }, animationStyle: animationType.slideRight)
         
     }
     
-    @IBAction func AlertWithSlideLeftAimation(sender: AnyObject) {
+    @IBAction func AlertWithSlideLeftAimation(_ sender: AnyObject) {
         
         alertViews.AAAlert("Hello", message: "AlertWithSlideLeftAimation", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
             print("Cancel Pressed")
-            }, animationStyle: animationType.SlideLeft)
+            }, animationStyle: animationType.slideLeft)
         
     }
     
