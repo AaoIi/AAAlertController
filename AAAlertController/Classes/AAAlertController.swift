@@ -10,13 +10,13 @@ import UIKit
 
 
 public enum animationType {
-    case Default
-    case Shake
-    case SlideDown
-    case SlideUp
-    case SlideRight
-    case SlideLeft
-    case Fade
+    case `default`
+    case shake
+    case slideDown
+    case slideUp
+    case slideRight
+    case slideLeft
+    case fade
 }
 
 class AAAlertController: UIViewController {
@@ -49,20 +49,20 @@ class AAAlertController: UIViewController {
     
     
     //* local variables
-    private var titleText : String?
-    private var messageText : String?
-    private var cancelButtonTitle : String?
-    private var okButtonTitle : String?
+    fileprivate var titleText : String?
+    fileprivate var messageText : String?
+    fileprivate var cancelButtonTitle : String?
+    fileprivate var okButtonTitle : String?
     // ok button title 1 is used for three button view (second button)
-    private var okButtonTitle1 : String?
-    private var oneViewFlag = false
-    private var twoViewFlag = false
-    private var threeViewFlag = false
-    private var okCompletionBlock : () -> (Void) = {}
+    fileprivate var okButtonTitle1 : String?
+    fileprivate var oneViewFlag = false
+    fileprivate var twoViewFlag = false
+    fileprivate var threeViewFlag = false
+    fileprivate var okCompletionBlock : () -> (Void) = {}
     // ok completion block 1 is used for three button view (second button)
-    private var okCompletionBlock1 : () -> (Void) = {}
-    private var cancelCompletionBlock : () -> (Void) = {}
-    private var animationStyle : animationType!
+    fileprivate var okCompletionBlock1 : () -> (Void) = {}
+    fileprivate var cancelCompletionBlock : () -> (Void) = {}
+    fileprivate var animationStyle : animationType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,53 +71,53 @@ class AAAlertController: UIViewController {
         if oneViewFlag == true {
             
             //* setup for alert with cancel button
-            self.viewWithTwoButtons.hidden = true
-            self.viewOneButton.hidden = false
-            self.viewWithThreeButtons.hidden = true
+            self.viewWithTwoButtons.isHidden = true
+            self.viewOneButton.isHidden = false
+            self.viewWithThreeButtons.isHidden = true
             
             self.titleLabel.text = titleText
             self.messageLabel.text = messageText
-            self.cancelButton.setTitle(cancelButtonTitle, forState: UIControlState.Normal)
-            self.cancelButton.addTarget(self, action: #selector(self.cancelAAAlertController(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            self.cancelButton.setTitle(cancelButtonTitle, for: UIControlState())
+            self.cancelButton.addTarget(self, action: #selector(self.cancelAAAlertController(_:)), for: UIControlEvents.touchUpInside)
             
             caclulateAlertHeight(viewOneHeight, view: viewOneButton, messageLabel: messageLabel, titleHeightConstraint: titleLabelHeight, titleLabel: titleLabel)
             
         }else if twoViewFlag == true{
             
             //* setup for alert with action and cancel button
-            self.viewWithTwoButtons.hidden = false
-            self.viewOneButton.hidden = true
-            self.viewWithThreeButtons.hidden = true
+            self.viewWithTwoButtons.isHidden = false
+            self.viewOneButton.isHidden = true
+            self.viewWithThreeButtons.isHidden = true
             
             self.titleLabel2.text = titleText
             self.messageLabel2.text = messageText
             
-            self.cancelButton2.setTitle(cancelButtonTitle, forState: UIControlState.Normal)
-            self.cancelButton2.addTarget(self, action: #selector(self.cancelAAAlertController(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            self.cancelButton2.setTitle(cancelButtonTitle, for: UIControlState())
+            self.cancelButton2.addTarget(self, action: #selector(self.cancelAAAlertController(_:)), for: UIControlEvents.touchUpInside)
             
-            self.okButton.setTitle(okButtonTitle, forState: UIControlState.Normal)
-            self.okButton.addTarget(self, action: #selector(self.okAAAlertController(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            self.okButton.setTitle(okButtonTitle, for: UIControlState())
+            self.okButton.addTarget(self, action: #selector(self.okAAAlertController(_:)), for: UIControlEvents.touchUpInside)
             
             caclulateAlertHeight(viewTwoHeight, view: viewWithTwoButtons, messageLabel: messageLabel2, titleHeightConstraint: titleLabel2Height, titleLabel: titleLabel2)
 
         }else {
         
             //* Setup for alert with two buttons and cancel button
-            self.viewWithTwoButtons.hidden = true
-            self.viewOneButton.hidden = true
-            self.viewWithThreeButtons.hidden = false
+            self.viewWithTwoButtons.isHidden = true
+            self.viewOneButton.isHidden = true
+            self.viewWithThreeButtons.isHidden = false
         
             self.titleLabel3.text = titleText
             self.messageLabel3.text = messageText
             
-            self.cancelButton3.setTitle(cancelButtonTitle, forState: UIControlState.Normal)
-            self.cancelButton3.addTarget(self, action: #selector(self.cancelAAAlertController(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            self.cancelButton3.setTitle(cancelButtonTitle, for: UIControlState())
+            self.cancelButton3.addTarget(self, action: #selector(self.cancelAAAlertController(_:)), for: UIControlEvents.touchUpInside)
             
-            self.firstButton.setTitle(okButtonTitle, forState: UIControlState.Normal)
-            self.firstButton.addTarget(self, action: #selector(self.okAAAlertController(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            self.firstButton.setTitle(okButtonTitle, for: UIControlState())
+            self.firstButton.addTarget(self, action: #selector(self.okAAAlertController(_:)), for: UIControlEvents.touchUpInside)
             
-            self.secondButton.setTitle(okButtonTitle1, forState: UIControlState.Normal)
-            self.secondButton.addTarget(self, action: #selector(self.okAAAlertController1(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            self.secondButton.setTitle(okButtonTitle1, for: UIControlState())
+            self.secondButton.addTarget(self, action: #selector(self.okAAAlertController1(_:)), for: UIControlEvents.touchUpInside)
             
             caclulateAlertHeight(viewThreeHeight, view: viewWithThreeButtons, messageLabel: messageLabel, titleHeightConstraint: titleLabel3Height, titleLabel: titleLabel3)
         
@@ -126,7 +126,7 @@ class AAAlertController: UIViewController {
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         if oneViewFlag == true {
             
@@ -147,7 +147,7 @@ class AAAlertController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func AAAlertController(title:String,message:String,cancelButtonTitle:String,animationStyle:animationType,completionBlock: () -> (Void)){
+    func AAAlertController(_ title:String,message:String,cancelButtonTitle:String,animationStyle:animationType,completionBlock: @escaping () -> (Void)){
         
         self.titleText = title
         self.messageText = message
@@ -160,7 +160,7 @@ class AAAlertController: UIViewController {
         
     }
     
-    func AAAlertController(title:String,message:String,cancelButtonTitle:String,okButtonTitle:String,animationStyle:animationType,okCompletionBlock: () -> (Void),cancelCompletionBlock: () -> (Void)){
+    func AAAlertController(_ title:String,message:String,cancelButtonTitle:String,okButtonTitle:String,animationStyle:animationType,okCompletionBlock: @escaping () -> (Void),cancelCompletionBlock: @escaping () -> (Void)){
         
         self.titleText = title
         self.messageText = message
@@ -175,7 +175,7 @@ class AAAlertController: UIViewController {
         
     }
     
-    func AAAlertController(title:String,message:String,firstButtonTitle:String,secondButtonTitle:String,cancelButtonTitle:String,animationStyle:animationType,okCompletionBlock: () -> (Void),okCompletionBlock1: () -> (Void),cancelCompletionBlock: () -> (Void)){
+    func AAAlertController(_ title:String,message:String,firstButtonTitle:String,secondButtonTitle:String,cancelButtonTitle:String,animationStyle:animationType,okCompletionBlock: @escaping () -> (Void),okCompletionBlock1: @escaping () -> (Void),cancelCompletionBlock: @escaping () -> (Void)){
         
         self.titleText = title
         self.messageText = message
@@ -194,77 +194,77 @@ class AAAlertController: UIViewController {
     
     
     @objc
-    private func cancelAAAlertController(cancelButtonSender :UIButton) {
+    fileprivate func cancelAAAlertController(_ cancelButtonSender :UIButton) {
         
         //* cancel alert Controller
         self.cancelCompletionBlock()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
     @objc
-    private func okAAAlertController(okButtonSender :UIButton){
+    fileprivate func okAAAlertController(_ okButtonSender :UIButton){
         
         //* executue completion block and cancel alert controller
         self.okCompletionBlock()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
     @objc
-    private func okAAAlertController1(okButtonSender :UIButton){
+    fileprivate func okAAAlertController1(_ okButtonSender :UIButton){
         
         //* executue completion block and cancel alert controller
         self.okCompletionBlock1()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
     
-    private func makeAnimationForView(view:UIView){
+    fileprivate func makeAnimationForView(_ view:UIView){
     
         
-        if animationType.Default.hashValue == animationStyle.hashValue {
+        if animationType.default.hashValue == animationStyle.hashValue {
         
             // Start Zooming Animation
-            view.transform = CGAffineTransformMakeScale(1.2, 1.2)
+            view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             view.alpha = 0
             
-            UIView.animateWithDuration(0.3, delay: 0.0, options: [], animations: {
-                view.transform = CGAffineTransformMakeScale(1, 1)
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
+                view.transform = CGAffineTransform(scaleX: 1, y: 1)
                 view.alpha = 1
                 }, completion: nil)
             
-        }else if animationType.Shake.hashValue == animationStyle.hashValue {
+        }else if animationType.shake.hashValue == animationStyle.hashValue {
          
             let duration = 0.3
             let delay = 0.0
             
             // Start
-            view.transform = CGAffineTransformMakeTranslation(0, 0)
+            view.transform = CGAffineTransform(translationX: 0, y: 0)
             
-            UIView.animateKeyframesWithDuration(duration/5, delay: delay, options: [], animations: {
-                view.transform = CGAffineTransformMakeTranslation(30, 0)
+            UIView.animateKeyframes(withDuration: duration/5, delay: delay, options: [], animations: {
+                view.transform = CGAffineTransform(translationX: 30, y: 0)
                 }, completion: { (finished) in
                     
-                    UIView.animateKeyframesWithDuration(duration/5, delay: delay, options: [], animations: {
-                        view.transform = CGAffineTransformMakeTranslation(-30, 0)
+                    UIView.animateKeyframes(withDuration: duration/5, delay: delay, options: [], animations: {
+                        view.transform = CGAffineTransform(translationX: -30, y: 0)
                         
                         }, completion: { (finished) in
                             
-                            UIView.animateKeyframesWithDuration(duration/5, delay: delay, options: [], animations: {
-                                view.transform = CGAffineTransformMakeTranslation(15, 0)
+                            UIView.animateKeyframes(withDuration: duration/5, delay: delay, options: [], animations: {
+                                view.transform = CGAffineTransform(translationX: 15, y: 0)
                                 
                                 }, completion: { (finished) in
                                     
-                                    UIView.animateKeyframesWithDuration(duration/5, delay: delay, options: [], animations: {
-                                        view.transform = CGAffineTransformMakeTranslation(-15, 0)
+                                    UIView.animateKeyframes(withDuration: duration/5, delay: delay, options: [], animations: {
+                                        view.transform = CGAffineTransform(translationX: -15, y: 0)
                                         
                                         }, completion: { (finished) in
                                             
-                                            UIView.animateKeyframesWithDuration(duration/5, delay: delay, options: [], animations: {
+                                            UIView.animateKeyframes(withDuration: duration/5, delay: delay, options: [], animations: {
                                                 
-                                                view.transform = CGAffineTransformMakeTranslation(0, 0)
+                                                view.transform = CGAffineTransform(translationX: 0, y: 0)
                                                 
                                                 }, completion: { (finished) in
                                                     
@@ -274,54 +274,54 @@ class AAAlertController: UIViewController {
                     })
             })
             
-        }else if animationType.SlideDown.hashValue == animationStyle.hashValue {
+        }else if animationType.slideDown.hashValue == animationStyle.hashValue {
         
-            view.transform = CGAffineTransformMakeTranslation(0, -CGRectGetHeight(UIScreen.mainScreen().bounds))
+            view.transform = CGAffineTransform(translationX: 0, y: -UIScreen.main.bounds.height)
             
-            UIView.animateKeyframesWithDuration(0.3, delay: 0.0, options: [], animations: {
+            UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
                 
-                view.transform = CGAffineTransformMakeTranslation(0, 0)
+                view.transform = CGAffineTransform(translationX: 0, y: 0)
 
                 }, completion: nil)
             
         
-        }else if animationType.SlideUp.hashValue == animationStyle.hashValue {
+        }else if animationType.slideUp.hashValue == animationStyle.hashValue {
         
         
-            view.transform = CGAffineTransformMakeTranslation(0, CGRectGetHeight(UIScreen.mainScreen().bounds))
+            view.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height)
             
-            UIView.animateKeyframesWithDuration(0.3, delay: 0.0, options: [], animations: {
+            UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
                 
-                view.transform = CGAffineTransformMakeTranslation(0, 0)
-                
-                }, completion: nil)
-            
-        }else if animationType.SlideRight.hashValue == animationStyle.hashValue {
-            
-            view.transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(UIScreen.mainScreen().bounds),0)
-            
-            UIView.animateKeyframesWithDuration(0.3, delay: 0.0, options: [], animations: {
-                
-                view.transform = CGAffineTransformMakeTranslation(0, 0)
+                view.transform = CGAffineTransform(translationX: 0, y: 0)
                 
                 }, completion: nil)
             
+        }else if animationType.slideRight.hashValue == animationStyle.hashValue {
             
-        }else if animationType.SlideLeft.hashValue == animationStyle.hashValue {
+            view.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width,y: 0)
             
-            view.transform = CGAffineTransformMakeTranslation(CGRectGetWidth(UIScreen.mainScreen().bounds),0)
-            
-            UIView.animateKeyframesWithDuration(0.3, delay: 0.0, options: [], animations: {
+            UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
                 
-                view.transform = CGAffineTransformMakeTranslation(0, 0)
+                view.transform = CGAffineTransform(translationX: 0, y: 0)
                 
                 }, completion: nil)
             
             
-        }else if animationType.Fade.hashValue == animationStyle.hashValue {
+        }else if animationType.slideLeft.hashValue == animationStyle.hashValue {
+            
+            view.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width,y: 0)
+            
+            UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
+                
+                view.transform = CGAffineTransform(translationX: 0, y: 0)
+                
+                }, completion: nil)
+            
+            
+        }else if animationType.fade.hashValue == animationStyle.hashValue {
         
             view.alpha = 0
-            UIView.animateKeyframesWithDuration(0.3, delay: 0.0, options: [], animations: {
+            UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
 
                 view.alpha = 1
 
@@ -334,7 +334,7 @@ class AAAlertController: UIViewController {
     
     
     
-    private func caclulateAlertHeight(viewHeightConstraint:NSLayoutConstraint,view:UIView,messageLabel:UILabel,titleHeightConstraint:NSLayoutConstraint,titleLabel:UILabel){
+    fileprivate func caclulateAlertHeight(_ viewHeightConstraint:NSLayoutConstraint,view:UIView,messageLabel:UILabel,titleHeightConstraint:NSLayoutConstraint,titleLabel:UILabel){
         
         //* extend message to take title top
         if titleLabel.text == "" {
@@ -367,11 +367,11 @@ class AAAlertController: UIViewController {
     }
     
     
-    private func calculateTextHeight(LabelText:UILabel) -> CGFloat{
+    fileprivate func calculateTextHeight(_ LabelText:UILabel) -> CGFloat{
     
     let labelWidth = LabelText.frame.width
-    let maxLabelSize = CGSize(width: labelWidth, height: CGFloat.max)
-    let actualLabelSize = LabelText.text!.boundingRectWithSize(maxLabelSize, options: [.UsesLineFragmentOrigin], attributes: [NSFontAttributeName: LabelText.font], context: nil)
+    let maxLabelSize = CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude)
+    let actualLabelSize = LabelText.text!.boundingRect(with: maxLabelSize, options: [.usesLineFragmentOrigin], attributes: [NSFontAttributeName: LabelText.font], context: nil)
         return actualLabelSize.height
     
     }
