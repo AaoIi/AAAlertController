@@ -51,8 +51,8 @@ print("Cancel Pressed")
 
 
 ## Requierments ##
-* Swift 2.2+
-* IOS 7.0+
+* Swift 3.0+
+* IOS 8.0+
 
 ## License ##
 
