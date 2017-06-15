@@ -16,7 +16,8 @@ The Alert is fully optimzed to handle long entred text for title and message, an
 // send title, message and button title with completion block also with your prefered animation
 alertView.AAAlert("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
 print("Cancel Pressed")
-}, animationStyle: animationType.Default)```
+}, animationStyle: animationType.Default)
+```<br/>
 
 ##### &emsp;&emsp; 3.2) With Two Buttons:<br/> 
 
@@ -26,7 +27,8 @@ alertView.AAAlert("Hello", message: "AlertWithCancelAndOK", okButtonTitle: "OK",
 print("OK Pressed")
 }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
 print("Cancel Pressed")
-}, animationStyle: animationType.Default)```
+}, animationStyle: animationType.Default)
+```<br/>
 
 ##### &emsp;&emsp; 3.3) With Three Buttons:<br/> 
 
@@ -38,7 +40,9 @@ print("Cancel Pressed")
                 print("Rate Pressed")
             }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
                 print("Cancel Pressed")
-            }, animationStyle: animationType.Default)```</br>
+            }, animationStyle: animationType.Default)
+			```
+		</br>
 
 ##### 4) animationTypes:<br/> 
 
