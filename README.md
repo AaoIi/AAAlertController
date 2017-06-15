@@ -9,8 +9,10 @@ The Alert is fully optimzed to handle long entred text for title and message, an
 
 ## Usage ##
 ##### 1) import ```AAAlertController.swift``` ```And AAAlertController.xib``` And ```AAAlertInterface.swift``` into your project <br/>
-#####2) Create instance of alert: ```let alertView = AAAlertInterface()``` <br/>
-#####3) Show Alert:<br/><br/>
+
+##### 2) Create instance of alert: ```let alertView = AAAlertInterface()``` <br/>
+
+##### 3) Show Alert:<br/><br/>
 
 ##### 3.1) With one Button:<br/> 
 
