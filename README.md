@@ -21,8 +21,9 @@ print("Cancel Pressed")
 
 ```
 
+##### 3.2) With Two Buttons:<br/> 
 
-// 3.2) With Two Buttons:
+// 
 
 ```swift
 // send title, message and buttons title with completion block also with your prefered animation
@@ -33,8 +34,7 @@ print("Cancel Pressed")
 }, animationStyle: animationType.Default)
 ```
 
-
-// 3.3) With Three Buttons:
+##### 3.3) With Three Buttons:<br/> 
 
 ```swift
 
@@ -60,7 +60,8 @@ case SlideUp
 case SlideRight
 case SlideLeft
 case Fade
-}```
+}
+```
 
 
 ## Requierments ##
