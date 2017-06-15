@@ -12,42 +12,46 @@ The Alert is fully optimzed to handle long entred text for title and message, an
 #####2) Create instance of alert: ```let alertView = AAAlertInterface()``` <br/>
 #####3) Show Alert:<br/><br/>   &emsp;&emsp;  3.1) With one Button:<br/>
 
-``// send title, message and button title with completion block also with your prefered animation``</br>
-``alertView.AAAlert("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
+```swift
+// send title, message and button title with completion block also with your prefered animation
+alertView.AAAlert("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
 print("Cancel Pressed")
-}, animationStyle: animationType.Default)``</br>
+}, animationStyle: animationType.Default)```
 
 ##### &emsp;&emsp; 3.2) With Two Buttons:<br/> 
 
-``// send title, message and buttons title with completion block also with your prefered animation``</br>
-``alertView.AAAlert("Hello", message: "AlertWithCancelAndOK", okButtonTitle: "OK", okCompletionBlock: { () -> (Void) in
+```swift
+// send title, message and buttons title with completion block also with your prefered animation
+alertView.AAAlert("Hello", message: "AlertWithCancelAndOK", okButtonTitle: "OK", okCompletionBlock: { () -> (Void) in
 print("OK Pressed")
 }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
 print("Cancel Pressed")
-}, animationStyle: animationType.Default)``</br> 
+}, animationStyle: animationType.Default)```
 
 ##### &emsp;&emsp; 3.3) With Three Buttons:<br/> 
 
-``// send title, message and buttons title with completion block also with your prefered animation``</br>
-        ``alertViews.AAAlert("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
+```swift
+// send title, message and buttons title with completion block also with your prefered animation
+        alertViews.AAAlert("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
                 print("Share Pressed")
             }, secondButtonTitle: "Rate", secondButtonCompletionBlock: { () -> (Void) in
                 print("Rate Pressed")
             }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
                 print("Cancel Pressed")
-            }, animationStyle: animationType.Default)``</br>
+            }, animationStyle: animationType.Default)```</br>
 
 ##### 4) animationTypes:<br/> 
 
-``public enum animationType {``<br/> 
-``case Default``<br/> 
-``case Shake``<br/> 
-``case SlideDown``<br/> 
-``case SlideUp``<br/> 
-``case SlideRight``<br/> 
-``case SlideLeft``<br/> 
-``case Fade``<br/> 
-``}``<br/> 
+```swift
+public enum animationType {
+case Default
+case Shake
+case SlideDown
+case SlideUp
+case SlideRight
+case SlideLeft
+case Fade
+}```
 
 
 ## Requierments ##
