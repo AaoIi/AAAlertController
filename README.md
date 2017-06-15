@@ -13,13 +13,16 @@ The Alert is fully optimzed to handle long entred text for title and message, an
 #####3) Show Alert:<br/><br/>   &emsp;&emsp;  3.1) With one Button:<br/>
 
 ```swift
+
 // send title, message and button title with completion block also with your prefered animation
 alertView.AAAlert("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
 print("Cancel Pressed")
 }, animationStyle: animationType.Default)
-```<br/>
 
-##### &emsp;&emsp; 3.2) With Two Buttons:<br/> 
+```
+<br/>
+
+// 3.2) With Two Buttons:
 
 ```swift
 // send title, message and buttons title with completion block also with your prefered animation
@@ -28,11 +31,13 @@ print("OK Pressed")
 }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
 print("Cancel Pressed")
 }, animationStyle: animationType.Default)
-```<br/>
+```
+<br/>
 
-##### &emsp;&emsp; 3.3) With Three Buttons:<br/> 
+// 3.3) With Three Buttons:
 
 ```swift
+
 // send title, message and buttons title with completion block also with your prefered animation
         alertViews.AAAlert("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
                 print("Share Pressed")
@@ -41,7 +46,8 @@ print("Cancel Pressed")
             }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
                 print("Cancel Pressed")
             }, animationStyle: animationType.Default)
-			```
+			
+```
 		</br>
 
 ##### 4) animationTypes:<br/> 
