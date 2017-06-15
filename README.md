@@ -20,7 +20,7 @@ print("Cancel Pressed")
 }, animationStyle: animationType.Default)
 
 ```
-<br/>
+
 
 // 3.2) With Two Buttons:
 
@@ -32,7 +32,7 @@ print("OK Pressed")
 print("Cancel Pressed")
 }, animationStyle: animationType.Default)
 ```
-<br/>
+
 
 // 3.3) With Three Buttons:
 
@@ -48,7 +48,6 @@ print("Cancel Pressed")
             }, animationStyle: animationType.Default)
 			
 ```
-		</br>
 
 ##### 4) animationTypes:<br/> 
 
