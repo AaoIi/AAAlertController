@@ -10,7 +10,9 @@ The Alert is fully optimzed to handle long entred text for title and message, an
 ## Usage ##
 ##### 1) import ```AAAlertController.swift``` ```And AAAlertController.xib``` And ```AAAlertInterface.swift``` into your project <br/>
 #####2) Create instance of alert: ```let alertView = AAAlertInterface()``` <br/>
-#####3) Show Alert:<br/><br/>   &emsp;&emsp;  3.1) With one Button:<br/>
+#####3) Show Alert:<br/><br/>
+
+##### 3.1) With one Button:<br/> 
 
 ```swift
 
@@ -22,8 +24,6 @@ print("Cancel Pressed")
 ```
 
 ##### 3.2) With Two Buttons:<br/> 
-
-// 
 
 ```swift
 // send title, message and buttons title with completion block also with your prefered animation
