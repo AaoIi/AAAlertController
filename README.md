@@ -26,7 +26,7 @@ pod 'AlertController'
 [CocoaPods]: https://cocoapods.org
 [CocoaPods Installation]: https://guides.cocoapods.org/using/getting-started.html#getting-started
 
-4. In your code import AASnackbar like so:
+4. In your code import AlertController like so:
 `import AlertController`
 
 ## Usage ##
