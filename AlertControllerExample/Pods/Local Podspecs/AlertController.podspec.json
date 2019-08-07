@@ -1,0 +1,30 @@
+{
+  "name": "AlertController",
+  "version": "1.0.0",
+  "summary": "An alternative to UIAlertController with amazing amiations - Swift",
+  "description": "AAAlertController is another alternative of UIAlertController, some people would say UIAlertController already exists! but my reason to create this alert because UIAlertController still having bugs to change the tint color of the whole app at some point.<br/>\nThe Alert is fully optimzed to handle long entred text for title and message, and a completion block for each button pressed with different amazing kinds of animations.",
+  "homepage": "https://github.com/AaoIi/AlertController",
+  "screenshots": "https://raw.githubusercontent.com/AaoIi/AAAlertController/master/demo1.gif",
+  "license": "MIT",
+  "authors": "Saad Albasha",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "swift_versions": "5.0",
+  "source": {
+    "git": "https://github.com/AaoIi/AlertController.git",
+    "tag": "1.0.0"
+  },
+  "source_files": [
+    "AlertController/**/*.swift",
+    "AlertController/**/*.h"
+  ],
+  "ios": {
+    "resource_bundles": {
+      "AlertController": [
+        "AlertController/**/*.xib"
+      ]
+    }
+  },
+  "swift_version": "5.0"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - AlertController (1.0.0)
+
+DEPENDENCIES:
+  - AlertController (from `../AlertController/`)
+
+EXTERNAL SOURCES:
+  AlertController:
+    :path: "../AlertController/"
+
+SPEC CHECKSUMS:
+  AlertController: 8a3c19441c61a7d3b4d1c29d9b6dfee510fea2c5
+
+PODFILE CHECKSUM: 2d9d8751960693fc444aedb57f2067cf17d0d5b1
+
+COCOAPODS: 1.7.2

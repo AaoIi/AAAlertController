@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D956194DC8048452BB627EE /* Pods_AlertControllerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F919BE9AB3D12AF5CABE881 /* Pods_AlertControllerExample.framework */; };
 		EF96E60822FAB7150005B028 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E60722FAB7150005B028 /* AppDelegate.swift */; };
 		EF96E60A22FAB7150005B028 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96E60922FAB7150005B028 /* ViewController.swift */; };
 		EF96E60D22FAB7150005B028 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF96E60B22FAB7150005B028 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09FB675888DF222C39F69703 /* Pods-AlertControllerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertControllerExample.release.xcconfig"; path = "Target Support Files/Pods-AlertControllerExample/Pods-AlertControllerExample.release.xcconfig"; sourceTree = "<group>"; };
+		0F919BE9AB3D12AF5CABE881 /* Pods_AlertControllerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlertControllerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D88D21AD9B561ED74E4FB2 /* Pods-AlertControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertControllerExample.debug.xcconfig"; path = "Target Support Files/Pods-AlertControllerExample/Pods-AlertControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
 		EF96E60422FAB7150005B028 /* AlertControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF96E60722FAB7150005B028 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF96E60922FAB7150005B028 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D956194DC8048452BB627EE /* Pods_AlertControllerExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13E16E44CABCB103555370E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2D88D21AD9B561ED74E4FB2 /* Pods-AlertControllerExample.debug.xcconfig */,
+				09FB675888DF222C39F69703 /* Pods-AlertControllerExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EF96E5FB22FAB7150005B028 = {
 			isa = PBXGroup;
 			children = (
 				EF96E60622FAB7150005B028 /* AlertControllerExample */,
 				EF96E60522FAB7150005B028 /* Products */,
+				13E16E44CABCB103555370E8 /* Pods */,
+				F92338F87061EF3CCB4C05FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = AlertControllerExample;
 			sourceTree = "<group>";
 		};
+		F92338F87061EF3CCB4C05FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F919BE9AB3D12AF5CABE881 /* Pods_AlertControllerExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF96E61622FAB7170005B028 /* Build configuration list for PBXNativeTarget "AlertControllerExample" */;
 			buildPhases = (
+				0A5221ED00650912C91A7CD2 /* [CP] Check Pods Manifest.lock */,
 				EF96E60022FAB7150005B028 /* Sources */,
 				EF96E60122FAB7150005B028 /* Frameworks */,
 				EF96E60222FAB7150005B028 /* Resources */,
+				36D0270825FE710B4D394E69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A5221ED00650912C91A7CD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlertControllerExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36D0270825FE710B4D394E69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlertControllerExample/Pods-AlertControllerExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlertControllerExample/Pods-AlertControllerExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlertControllerExample/Pods-AlertControllerExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF96E60022FAB7150005B028 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		EF96E61722FAB7170005B028 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2D88D21AD9B561ED74E4FB2 /* Pods-AlertControllerExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		EF96E61822FAB7170005B028 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FB675888DF222C39F69703 /* Pods-AlertControllerExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

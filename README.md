@@ -67,14 +67,14 @@ print("Cancel Pressed")
 ##### 4) animationTypes:<br/> 
 
 ```swift
-public enum animationType {
-case Default
-case Shake
-case SlideDown
-case SlideUp
-case SlideRight 
-case SlideLeft
-case Fade
+public enum animationType{
+case `default`
+case shake
+case slideDown
+case slideUp
+case slideRight
+case slideLeft
+case fade
 }
 ```
 

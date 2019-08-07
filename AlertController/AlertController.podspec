@@ -37,7 +37,7 @@ The Alert is fully optimzed to handle long entred text for title and message, an
 
   spec.source_files  = 'AlertController/**/*.swift','AlertController/**/*.h'
   spec.ios.resource_bundle = {
-    'AAToast' => ['AlertController/**/*.xib']
+    'AlertController' => ['AlertController/**/*.xib']
   }
 
 
