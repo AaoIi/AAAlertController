@@ -31,37 +31,37 @@ pod 'AlertController'
 
 ## Usage ##
 ##### 1) import AlertController <br/>
-##### 2) Show Alert:<br/><br/>   &emsp;&emsp;  2.1) with single Button:<br/>
+##### 2) Show Alert:<br/><br/> 2.1) with single Button:<br/>
 
 ```swift
-		// send title, message and button title with completion block also with your prefered animation
-        AlertController.show("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
-            print("Cancel Pressed")
-        }, animationStyle: .default)
+// send title, message and button title with completion block also with your prefered animation
+AlertController.show("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
+print("Cancel Pressed")
+}, animationStyle: .default)
 ```
 
-##### &emsp;&emsp; 2.2) with double Buttons:<br/> 
+##### 2.2) with double Buttons:<br/> 
 
 ```swift
-		// send title, message and button title with completion block also with your prefered animation
-        AlertController.show("Hello", message: "AlertWithCancelAndOK", firstButtonTitle: "OK", firstActionCompletion: { () -> (Void) in
-            print("OK Pressed")
-        }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
-            print("Cancel Pressed")
-        }, animationStyle: .default)
+// send title, message and button title with completion block also with your prefered animation
+AlertController.show("Hello", message: "AlertWithCancelAndOK", firstButtonTitle: "OK", firstActionCompletion: { () -> (Void) in
+print("OK Pressed")
+}, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
+print("Cancel Pressed")
+}, animationStyle: .default)
 ```
 
-##### &emsp;&emsp; 2.3) with triple Buttons:<br/> 
+##### 2.3) with triple Buttons:<br/> 
 
 ```swift
-		// send title, message and button title with completion block also with your prefered animation
-        AlertController.show("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
-            print("Share Pressed")
-        }, secondButtonTitle: "Rate", secondButtonCompletionBlock: { () -> (Void) in
-            print("Rate Pressed")
-        }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
-            print("Cancel Pressed")
-        }, animationStyle: .default)
+// send title, message and button title with completion block also with your prefered animation
+AlertController.show("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
+print("Share Pressed")
+}, secondButtonTitle: "Rate", secondButtonCompletionBlock: { () -> (Void) in
+print("Rate Pressed")
+}, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
+print("Cancel Pressed")
+}, animationStyle: .default)
 ```
 
 ##### 4) animationTypes:<br/> 
