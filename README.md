@@ -1,7 +1,7 @@
-# AlertController
+# FMAlertController
 
 ## Description
-AlertController is another alternative of UIAlertController, some people would say UIAlertController already exists! but my reason to create this alert because UIAlertController still having bugs to change the tint color of the whole app at some point.<br/>
+FMAlertController is another alternative of UIAlertController, some people would say UIAlertController already exists! but my reason to create this alert because UIAlertController still having bugs to change the tint color of the whole app at some point.<br/>
 The Alert is fully optimzed to handle long entred text for title and message, and a completion block for each button pressed with different amazing kinds of animations.
 
 ## Preview Demo
@@ -10,7 +10,7 @@ The Alert is fully optimzed to handle long entred text for title and message, an
 ## Installation
 
 ### CocoaPods
-[CocoaPods][] is a dependency manager for Cocoa projects. To install AlertController with CocoaPods:
+[CocoaPods][] is a dependency manager for Cocoa projects. To install FMAlertController with CocoaPods:
 
 1. Make sure CocoaPods is [installed][CocoaPods Installation].
 
@@ -18,7 +18,7 @@ The Alert is fully optimzed to handle long entred text for title and message, an
 
 ``` ruby
 use_frameworks!
-pod 'AlertController'
+pod 'FMAlertController'
 ```
 
 3. Run `pod install`.
@@ -26,16 +26,16 @@ pod 'AlertController'
 [CocoaPods]: https://cocoapods.org
 [CocoaPods Installation]: https://guides.cocoapods.org/using/getting-started.html#getting-started
 
-4. In your code import AlertController like so:
-`import AlertController`
+4. In your code import FMAlertController like so:
+`import FMAlertController`
 
 ## Usage ##
-##### 1) import AlertController <br/>
+##### 1) import FMAlertController <br/>
 ##### 2) Show Alert:<br/><br/> 2.1) with single Button:<br/>
 
 ```swift
 // send title, message and button title with completion block also with your prefered animation
-AlertController.show("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
+FMAlertController.show("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
 print("Cancel Pressed")
 }, animationStyle: .default)
 ```
@@ -44,7 +44,7 @@ print("Cancel Pressed")
 
 ```swift
 // send title, message and button title with completion block also with your prefered animation
-AlertController.show("Hello", message: "AlertWithCancelAndOK", firstButtonTitle: "OK", firstActionCompletion: { () -> (Void) in
+FMAlertController.show("Hello", message: "AlertWithCancelAndOK", firstButtonTitle: "OK", firstActionCompletion: { () -> (Void) in
 print("OK Pressed")
 }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
 print("Cancel Pressed")
@@ -55,7 +55,7 @@ print("Cancel Pressed")
 
 ```swift
 // send title, message and button title with completion block also with your prefered animation
-AlertController.show("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
+FMAlertController.show("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
 print("Share Pressed")
 }, secondButtonTitle: "Rate", secondButtonCompletionBlock: { () -> (Void) in
 print("Rate Pressed")

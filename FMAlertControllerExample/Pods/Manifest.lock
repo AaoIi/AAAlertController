@@ -1,0 +1,16 @@
+PODS:
+  - FMAlertController (1.0.0)
+
+DEPENDENCIES:
+  - FMAlertController (from `../FMAlertController/`)
+
+EXTERNAL SOURCES:
+  FMAlertController:
+    :path: "../FMAlertController/"
+
+SPEC CHECKSUMS:
+  FMAlertController: f0afb1c2ee94931eb9d6b2e4c3c6147cf5af1bfd
+
+PODFILE CHECKSUM: 8107b3262a71b7febbdec5c7978a47e85d350954
+
+COCOAPODS: 1.7.2
