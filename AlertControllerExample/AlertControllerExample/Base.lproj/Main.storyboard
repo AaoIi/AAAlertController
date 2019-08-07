@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cnr-Oc-ldb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AAAlertController-->
+        <scene sceneID="04Y-eo-GBj">
+            <objects>
+                <viewController id="boq-ME-xxP" customClass="ViewController" customModule="AAAlertController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IJG-Ep-07s"/>
+                        <viewControllerLayoutGuide type="bottom" id="alm-jV-1Up"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qdS-Ml-vOd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J91-aZ-esB">
+                                <rect key="frame" x="78" y="119" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="6d8-eL-37A"/>
+                                    <constraint firstAttribute="height" constant="35" id="qAk-6B-xeI"/>
+                                </constraints>
+                                <state key="normal" title="Alert With Cancel">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithCancel:" destination="boq-ME-xxP" eventType="touchUpInside" id="JHI-dk-rfI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFv-zX-vE4">
+                                <rect key="frame" x="78" y="157" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="9A6-kr-8jf"/>
+                                    <constraint firstAttribute="height" constant="35" id="pn4-Ha-33h"/>
+                                </constraints>
+                                <state key="normal" title="Alert With Cancel &amp; OK">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithCancelAndOK:" destination="boq-ME-xxP" eventType="touchUpInside" id="XQf-dM-w6e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi3-AR-K8a">
+                                <rect key="frame" x="78" y="195" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="9B4-s5-nh4"/>
+                                    <constraint firstAttribute="width" constant="258" id="CQ7-FE-fDP"/>
+                                </constraints>
+                                <state key="normal" title="Alert With Three Buttons">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithThreeButtons:" destination="boq-ME-xxP" eventType="touchUpInside" id="DEZ-ZW-6g3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inq-kl-Z45">
+                                <rect key="frame" x="78" y="233" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Uk7-AU-g8F"/>
+                                    <constraint firstAttribute="width" constant="258" id="uOd-L5-gir"/>
+                                </constraints>
+                                <state key="normal" title="Alert With Fade Animation">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithFadeAnimation:" destination="boq-ME-xxP" eventType="touchUpInside" id="4LP-jN-7Ur"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqA-bN-FIg">
+                                <rect key="frame" x="78" y="271" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="dPi-gR-nNB"/>
+                                    <constraint firstAttribute="height" constant="35" id="yA5-1l-Nfj"/>
+                                </constraints>
+                                <state key="normal" title="Alert With Shake Animation">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithShakeAnimation:" destination="boq-ME-xxP" eventType="touchUpInside" id="Mk7-Jo-xKc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGs-G5-mSs">
+                                <rect key="frame" x="78" y="309" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Eew-pg-Lee"/>
+                                    <constraint firstAttribute="width" constant="258" id="e6r-GB-33J"/>
+                                </constraints>
+                                <state key="normal" title="Alert With SlideDown Animation">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithSlideDownAimation:" destination="boq-ME-xxP" eventType="touchUpInside" id="smK-UK-39E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVn-lU-CX7">
+                                <rect key="frame" x="78" y="347" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="hsi-vt-MVz"/>
+                                    <constraint firstAttribute="width" constant="258" id="oCk-U7-h9D"/>
+                                </constraints>
+                                <state key="normal" title="Alert With SlideUp Animation">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithSlideUpAimation:" destination="boq-ME-xxP" eventType="touchUpInside" id="whP-rJ-Y9m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-7V-KvV">
+                                <rect key="frame" x="78" y="385" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="dWa-A2-lGI"/>
+                                    <constraint firstAttribute="height" constant="35" id="pbZ-AR-sSq"/>
+                                </constraints>
+                                <state key="normal" title="Alert With SlideRight Animation">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithSlideRightAimation:" destination="boq-ME-xxP" eventType="touchUpInside" id="2g7-2u-YKt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlP-GT-Nul">
+                                <rect key="frame" x="78" y="423" width="258" height="35"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="Ufv-hw-PUS"/>
+                                    <constraint firstAttribute="height" constant="35" id="wT7-iN-zTj"/>
+                                </constraints>
+                                <state key="normal" title="Alert With SlideLeft Animation">
+                                    <color key="titleColor" red="0.0" green="0.057984338640000001" blue="0.1164512435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AlertWithSlideLeftAimation:" destination="boq-ME-xxP" eventType="touchUpInside" id="otn-pk-9Fp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AqA-bN-FIg" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="7UC-yw-DfT"/>
+                            <constraint firstItem="bsl-7V-KvV" firstAttribute="top" secondItem="rVn-lU-CX7" secondAttribute="bottom" constant="3" id="7Xj-xP-gX8"/>
+                            <constraint firstItem="J91-aZ-esB" firstAttribute="top" secondItem="chm-5u-gL2" secondAttribute="top" constant="31" id="9Jn-u0-8lE"/>
+                            <constraint firstItem="Inq-kl-Z45" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="9aN-r5-iEH"/>
+                            <constraint firstItem="rVn-lU-CX7" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="MJj-yN-eO4"/>
+                            <constraint firstItem="aGs-G5-mSs" firstAttribute="top" secondItem="AqA-bN-FIg" secondAttribute="bottom" constant="3" id="Nf1-3T-MUo"/>
+                            <constraint firstItem="aGs-G5-mSs" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="Pkc-CW-h4C"/>
+                            <constraint firstItem="bsl-7V-KvV" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="YPu-Nx-hew"/>
+                            <constraint firstItem="AqA-bN-FIg" firstAttribute="top" secondItem="Inq-kl-Z45" secondAttribute="bottom" constant="3" id="cJF-mE-Pxm"/>
+                            <constraint firstItem="Inq-kl-Z45" firstAttribute="top" secondItem="gi3-AR-K8a" secondAttribute="bottom" constant="3" id="eLa-CW-aMD"/>
+                            <constraint firstItem="BlP-GT-Nul" firstAttribute="top" secondItem="bsl-7V-KvV" secondAttribute="bottom" constant="3" id="hMY-XX-S7A"/>
+                            <constraint firstItem="gFv-zX-vE4" firstAttribute="top" secondItem="J91-aZ-esB" secondAttribute="bottom" constant="3" id="kNo-65-cTo"/>
+                            <constraint firstItem="gFv-zX-vE4" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="kh9-XH-idb"/>
+                            <constraint firstItem="rVn-lU-CX7" firstAttribute="top" secondItem="aGs-G5-mSs" secondAttribute="bottom" constant="3" id="n4I-rC-Uk6"/>
+                            <constraint firstItem="BlP-GT-Nul" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="nJH-od-jZ6"/>
+                            <constraint firstItem="J91-aZ-esB" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="oDF-41-nvO"/>
+                            <constraint firstItem="gi3-AR-K8a" firstAttribute="top" secondItem="gFv-zX-vE4" secondAttribute="bottom" constant="3" id="opY-ld-RBb"/>
+                            <constraint firstItem="gi3-AR-K8a" firstAttribute="centerX" secondItem="qdS-Ml-vOd" secondAttribute="centerX" id="qay-HC-3RX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="chm-5u-gL2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AAAlertController" id="Qtf-gV-40r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JI5-PG-XI5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="167"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7OO-CK-O4k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cnr-Oc-ldb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="KyD-M1-ag4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="boq-ME-xxP" kind="relationship" relationship="rootViewController" id="J03-nZ-Lvq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ima-tM-cxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-325" y="167"/>
+        </scene>
+    </scenes>
+</document>
