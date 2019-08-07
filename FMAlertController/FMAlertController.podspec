@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.description  = "FMAlertController is another alternative of UIAlertController, some people would say UIAlertController already exists! but my reason to create this alert because UIAlertController still having bugs to change the tint color of the whole app at some point.<br/>
 The Alert is fully optimzed to handle long entred text for title and message, and a completion block for each button pressed with different amazing kinds of animations."
   spec.homepage     = "https://github.com/AaoIi/FMAlertController"
-  spec.screenshots  = 'https://raw.githubusercontent.com/AaoIi/AAAlertController/master/demo1.gif'
+  spec.screenshots  = 'https://github.com/AaoIi/FMAlertController/blob/master/demo1.gif?raw=true'
 
   spec.license      = "MIT"
 

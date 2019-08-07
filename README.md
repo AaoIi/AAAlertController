@@ -5,7 +5,7 @@ FMAlertController is another alternative of UIAlertController, some people would
 The Alert is fully optimzed to handle long entred text for title and message, and a completion block for each button pressed with different amazing kinds of animations.
 
 ## Preview Demo
-<img src="https://raw.githubusercontent.com/AaoIi/AAAlertController/master/demo1.gif">
+<img src="https://github.com/AaoIi/FMAlertController/blob/master/demo1.gif?raw=true">
 
 ## Installation
 
