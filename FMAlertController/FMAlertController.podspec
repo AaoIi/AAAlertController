@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FMAlertController"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "An alternative to UIAlertController with amazing amiations - Swift"
 
   spec.description  = "FMAlertController is another alternative of UIAlertController, some people would say UIAlertController already exists! but my reason to create this alert because UIAlertController still having bugs to change the tint color of the whole app at some point.<br/>
@@ -33,7 +33,7 @@ The Alert is fully optimzed to handle long entred text for title and message, an
   spec.platform     = :ios, "8.0"
   spec.swift_version = '5.0'
 
-  spec.source       = { :git => "https://github.com/AaoIi/FMAlertController.git", :tag => "1.0.0" }
+  spec.source       = { :git => "https://github.com/AaoIi/FMAlertController.git", :tag => "1.0.1" }
 
   spec.source_files  = 'FMAlertController/**/*.swift','FMAlertController/**/*.h'
   spec.ios.resource_bundle = {
