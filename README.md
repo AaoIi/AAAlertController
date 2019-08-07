@@ -1,57 +1,85 @@
-# AAAlertController
+# AlertController
 
 ## Description
-AAAlertController is another alternative of UIAlertController, some people would say UIAlertController already exists! but my reason to create this alert because UIAlertController still having bugs to change the tint color of the whole app at some point.<br/>
+AlertController is another alternative of UIAlertController, some people would say UIAlertController already exists! but my reason to create this alert because UIAlertController still having bugs to change the tint color of the whole app at some point.<br/>
 The Alert is fully optimzed to handle long entred text for title and message, and a completion block for each button pressed with different amazing kinds of animations.
 
 ## Preview Demo
-<img src="https://lh6.googleusercontent.com/pHwGEyVbVLzf-CH1qbfgpaERLa4GZLpAou_xVDJsNhyVEPkI-4pxkQ=w373-h642-p-b1-c0x00999999">
+<img src="https://raw.githubusercontent.com/AaoIi/AAAlertController/master/demo1.gif">
+
+## Installation
+
+### CocoaPods
+[CocoaPods][] is a dependency manager for Cocoa projects. To install AlertController with CocoaPods:
+
+1. Make sure CocoaPods is [installed][CocoaPods Installation].
+
+2. Update your Podfile to include the following:
+
+``` ruby
+use_frameworks!
+pod 'AlertController'
+```
+
+3. Run `pod install`.
+
+[CocoaPods]: https://cocoapods.org
+[CocoaPods Installation]: https://guides.cocoapods.org/using/getting-started.html#getting-started
+
+4. In your code import AASnackbar like so:
+`import AlertController`
 
 ## Usage ##
-##### 1) import ```AAAlertController.swift``` ```And AAAlertController.xib``` And ```AAAlertInterface.swift``` into your project <br/>
-#####2) Create instance of alert: ```let alertView = AAAlertInterface()``` <br/>
-#####3) Show Alert:<br/><br/>   &emsp;&emsp;  3.1) With one Button:<br/>
+##### 1) import AlertController <br/>
+##### 2) Show Alert:<br/><br/>   &emsp;&emsp;  2.1) with single Button:<br/>
 
-``// send title, message and button title with completion block also with your prefered animation``</br>
-``alertView.AAAlert("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
-print("Cancel Pressed")
-}, animationStyle: animationType.Default)``</br>
+```swift
+		// send title, message and button title with completion block also with your prefered animation
+        AlertController.show("Hello", message: "AlertWithCancel", cancelButtonTitle: "Cancel", completionBlock: { () -> (Void) in
+            print("Cancel Pressed")
+        }, animationStyle: .default)
+```
 
-##### &emsp;&emsp; 3.2) With Two Buttons:<br/> 
+##### &emsp;&emsp; 2.2) with double Buttons:<br/> 
 
-``// send title, message and buttons title with completion block also with your prefered animation``</br>
-``alertView.AAAlert("Hello", message: "AlertWithCancelAndOK", okButtonTitle: "OK", okCompletionBlock: { () -> (Void) in
-print("OK Pressed")
-}, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
-print("Cancel Pressed")
-}, animationStyle: animationType.Default)``</br> 
+```swift
+		// send title, message and button title with completion block also with your prefered animation
+        AlertController.show("Hello", message: "AlertWithCancelAndOK", firstButtonTitle: "OK", firstActionCompletion: { () -> (Void) in
+            print("OK Pressed")
+        }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
+            print("Cancel Pressed")
+        }, animationStyle: .default)
+```
 
-##### &emsp;&emsp; 3.3) With Three Buttons:<br/> 
+##### &emsp;&emsp; 2.3) with triple Buttons:<br/> 
 
-``// send title, message and buttons title with completion block also with your prefered animation``</br>
-        ``alertViews.AAAlert("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
-                print("Share Pressed")
-            }, secondButtonTitle: "Rate", secondButtonCompletionBlock: { () -> (Void) in
-                print("Rate Pressed")
-            }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
-                print("Cancel Pressed")
-            }, animationStyle: animationType.Default)``</br>
+```swift
+		// send title, message and button title with completion block also with your prefered animation
+        AlertController.show("Hello", message: "AlertWithThreeButtons", firstButtonTitle: "Share", firstButtonCompletionBlock: { () -> (Void) in
+            print("Share Pressed")
+        }, secondButtonTitle: "Rate", secondButtonCompletionBlock: { () -> (Void) in
+            print("Rate Pressed")
+        }, cancelButtonTitle: "Cancel", cancelCompletionBlock: { () -> (Void) in
+            print("Cancel Pressed")
+        }, animationStyle: .default)
+```
 
 ##### 4) animationTypes:<br/> 
 
-``public enum animationType {``<br/> 
-``case Default``<br/> 
-``case Shake``<br/> 
-``case SlideDown``<br/> 
-``case SlideUp``<br/> 
-``case SlideRight``<br/> 
-``case SlideLeft``<br/> 
-``case Fade``<br/> 
-``}``<br/> 
-
+```swift
+public enum animationType {
+case Default
+case Shake
+case SlideDown
+case SlideUp
+case SlideRight 
+case SlideLeft
+case Fade
+}
+```
 
 ## Requierments ##
-* Swift 3.0+
+* Swift 5.0+
 * IOS 8.0+
 
 ## License ##

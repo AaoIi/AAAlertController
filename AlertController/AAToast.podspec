@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.description  = "AAAlertController is another alternative of UIAlertController, some people would say UIAlertController already exists! but my reason to create this alert because UIAlertController still having bugs to change the tint color of the whole app at some point.<br/>
 The Alert is fully optimzed to handle long entred text for title and message, and a completion block for each button pressed with different amazing kinds of animations."
   spec.homepage     = "https://github.com/AaoIi/AlertController"
-  spec.screenshots  = 'https://lh6.googleusercontent.com/pHwGEyVbVLzf-CH1qbfgpaERLa4GZLpAou_xVDJsNhyVEPkI-4pxkQ=w373-h642-p-b1-c0x00999999
+  spec.screenshots  = 'https://raw.githubusercontent.com/AaoIi/AAAlertController/master/demo1.gif'
 
   spec.license      = "MIT"
 
